@@ -1,0 +1,5 @@
+.ipython-checkpoints
+spark-warehouse
+__pycache__
+*.pyc
+
