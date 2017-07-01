@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "Matrix multiplications\n======================\n\nSimple matrix multiplication benchmark for `Eigen3`, `Armadillo`, `FORTRAN`, `R` and `python`.\n\n## Results\n\nAmazingly `python/numpy` outperformed all of the other languages/libraries. Even when built against OpenBlas, python was fastest. Is this due to poor implementations of the other languages? You cannot do much with R, though.\n\n![benchmark]()\n\n## Usage\n\nFor `Eigen3` usage (supposing you have an Eigen installation in `/opt/local/eigen3`):\n\n```sh\n  g++ -std=c++11 -O3 -I/opt/local/eigen3/ matmul_eigen.cpp -o eigen\n  (time ./eigen) >> result.txt 2>> time.txt\n```\n\nFor `Armadillo` usage (with armadillo installed in `/opt/local/armadillo`) on a mac without OpenBlas. Building with OpenBlas did not change much:\n\n```sh\n  g++ -std=c++11 -O3  -I/opt/local/armadillo/include -DARMA_DONT_USE_WRAPPER matmul_armadillo.cpp -o armadillo -framework Accelerate\n  (time ./armadillo) >> result.txt 2>> time.txt\n```\n\nFor `FORTRAN` usage:\n\n```sh\n  gfortran -O3 matmul.f90 -o fortran\n  (time ./fortran) >> result.txt 2>> time.txt\n```\n\nFor `R` usage:\n\n```sh\n  (time ./R) >> result.txt 2>> time.txt\n```\n\nFor `python` usage:\n\n```sh\n  (time ./python) >> result.txt 2>> time.txt\n```\n",
+    "created" : 1498906959895.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3629461299",
+    "id" : "6126DF2E",
+    "lastKnownWriteTime" : 1498914697,
+    "last_content_update" : 1498914697667,
+    "path" : "~/PROJECTS/benchmarks/matmul/README.md",
+    "project_path" : "matmul/README.md",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "markdown"
+}

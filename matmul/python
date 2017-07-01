@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+
+import numpy
+
+m = 2500
+mat = numpy.ndarray(shape=(m , m))
+mat.fill(0.001)
+prod = numpy.dot(mat, mat)
+
+print(sum(sum(prod)))

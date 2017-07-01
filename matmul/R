@@ -1,0 +1,8 @@
+#!/usr/bin/env Rscript
+
+
+m <- 2500
+mat <- matrix(0.001, m, m)
+mat2 <- mat %*% mat
+
+print(sum(mat2))

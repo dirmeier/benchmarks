@@ -1,0 +1,5 @@
+./python  1.48s user 0.16s system 155% cpu 1.055 total
+./R  17.85s user 0.39s system 95% cpu 19.012 total
+./eigen  3.04s user 0.17s system 95% cpu 3.348 total
+./fortran  17.78s user 0.34s system 95% cpu 19.067 total
+./armadillo  1.64s user 0.14s system 149% cpu 1.193 total
