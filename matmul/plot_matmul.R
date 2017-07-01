@@ -16,4 +16,4 @@ ggplot(dat, aes(Language, Times, fill=Language)) +
   xlab("Language") +
   ylab("Times")
 
-ggsave(filename="./time.svg", device="svg")
+ggsave(filename="./matmul/data/time.png")
