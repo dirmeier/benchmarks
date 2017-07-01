@@ -1,3 +1,7 @@
+target/
+spark/scala/.idea/
+benchmarks.iml
+.idea/*
 .Rproj.user/*
 *.class
 *.log

@@ -41,13 +41,12 @@ feature_columns = [x for x in df.columns if x.startswith("cells")]
 assembler = VectorAssembler(inputCols=feature_columns,outputCol='features')
 data = assembler.transform(df)
 
-km = KMeans().setK(5).setSeed(23)
+km = KMeans().setK(2).setSeed(23)
 model = km.fit(data)
 
-print("Cluster Centers: ")
+print("\n\nCluster Centers: ")
 centers = model.clusterCenters()
-with open("test.loggg") as fh:
-    for center in centers:
-        fh.write(center)
-        fh.write("\n")
+print(centers)
+print("\n\n")
+
 spark.stop()
