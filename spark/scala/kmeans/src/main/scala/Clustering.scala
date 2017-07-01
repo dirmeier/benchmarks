@@ -38,7 +38,6 @@ object Clustering
       if (c.startsWith("cells")) feature_columns.++(c)
     }
 
-
     val assembler = new VectorAssembler()
       .setInputCols(feature_columns.toArray)
       .setOutputCol("features")
@@ -51,5 +50,6 @@ object Clustering
     model.clusterCenters.foreach(println)
     println("\n\n")
 
+    spark.stop()
   }
 }

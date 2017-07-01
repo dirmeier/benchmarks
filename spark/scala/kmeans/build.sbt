@@ -1,4 +1,4 @@
-name := "benchmark"
+name := "kmeans"
 version := "1.0"
 scalaVersion := "2.11.7"
 val sparkVersion = "2.1.1"
