@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "#!/usr/bin/env Rscript\n\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(ggthemr)\nggthemr(\"fresh\", \"scientific\")\n\ndat <- read.delim(\"./matmul/time.txt\", sep=\" \", header=F) %>%\n  transmute(Language = sub(\"./\", \"\", V1),\n            Times = as.numeric(as.character(sub(\"s\", \"\", V3))))\ndat$Language <- factor(dat$Language, levels = dat[order(dat$Times), 1])\n\nggplot(dat, aes(Language, Times, fill=Language)) +\n  geom_bar(stat=\"identity\") +\n  geom_text(aes(label=Times), vjust=-.25) +\n  xlab(\"Language\") +\n  ylab(\"Times\")\n\nggsave(filename=\"./time.svg\", device=\"svg\")\n",
+    "contents" : "#!/usr/bin/env Rscript\n\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(ggthemr)\nggthemr(\"fresh\", \"scientific\")\n\ndat <- read.delim(\"./matmul/time.txt\", sep=\" \", header=F) %>%\n  transmute(Language = sub(\"./\", \"\", V1),\n            Times = as.numeric(as.character(sub(\"s\", \"\", V3))))\ndat$Language <- factor(dat$Language, levels = dat[order(dat$Times), 1])\n\nggplot(dat, aes(Language, Times, fill=Language)) +\n  geom_bar(stat=\"identity\") +\n  geom_text(aes(label=Times), vjust=-.25) +\n  xlab(\"Language\") +\n  ylab(\"Times\")\n\nggsave(filename=\"./matmul/data/time.png\")\n",
     "created" : 1498911987621.000,
-    "dirty" : false,
+    "dirty" : true,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "311892492",
+    "hash" : "3556162261",
     "id" : "C0F3432A",
     "lastKnownWriteTime" : 1498914395,
-    "last_content_update" : 1498914395466,
+    "last_content_update" : 1498915004020,
     "path" : "~/PROJECTS/benchmarks/matmul/plot_matmul.R",
     "project_path" : "matmul/plot_matmul.R",
     "properties" : {
