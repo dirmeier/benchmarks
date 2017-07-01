@@ -20,12 +20,14 @@ from pyspark.ml.linalg import SparseVector, VectorUDT, Vector, Vectors
 
 conf = pyspark.SparkConf()
 sc = pyspark.SparkContext(conf=conf)
-spark = pyspark.sql.SparkSession(sc)
-
 
 file_name = "/Users/simondi/PHD/data/data/target_infect_x/screening_data_subset/cells_sample_10.tsv"
-df = spark.read.csv(path=file_name, sep="\t", header='true')
-gr = df.rdd.filter(lambda x: x[1] == "salmonella").groupBy(lambda x: x[8]).count()
+df = sc.textFile(file_name)
+gr = df.map(lambda x: x.split("\t")) \
+       .filter(lambda x: x[1] == "salmonella") \
+       .groupBy(lambda x: x[8]) \
+       .count()
 
-print(gr)
-spark.stop()
+print("\n\nResult is " + str(gr) + "\n\n")
+
+sc.stop()
