@@ -7,7 +7,7 @@ Simple matrix multiplication benchmark for `Eigen3`, `Armadillo`, `FORTRAN`, `R`
 
 Amazingly `python/numpy` outperformed all of the other languages/libraries. Even when built against OpenBlas, python was fastest. Is this due to poor implementations of the other languages? You cannot do much with R, though.
 
-![benchmark]()
+![benchmark](https://rawgit.com/dirmeier/benchmarks/master/matmul/data/time.svg)
 
 ## Usage
 
