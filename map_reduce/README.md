@@ -5,8 +5,10 @@ Simple benchmark between `Scala` and `Python` for Spark.
 
 ## Results
 
+As expected `Scala` is faster than `Python`. That is good :).
+
 <div align="center">
-<img src="https://github.com/dirmeier/benchmarks/blob/master/map_reduce/data/time.png" alt="Drawing" width="75%" />
+<img src="https://github.com/dirmeier/benchmarks/blob/master/map_reduce/data/time.png" alt="Drawing" width="50%" />
 </div>
 
 ## Usage
