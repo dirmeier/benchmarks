@@ -1,1 +1,3 @@
 node/node_modules/*
+gunicorn/__pycache__/*
+spring/target/*
