@@ -17,10 +17,10 @@ dat <- read_tsv("./data/time.tsv", col_names=F) %>%
 dat$Times <- dat$Times + 1
 dat$Type <- "Vector"
 dat$Type[dat$Class == "ptr w/o alloc" |
-         dat$Class == "ptr with alloc" ] <- "Pointer"
+           dat$Class == "ptr with alloc" ] <- "Pointer"
 dat$MeasuredAllocation <- "No"
 dat$MeasuredAllocation[dat$Class == "vec with alloc" |
-           dat$Class == "ptr with alloc" ] <- "Yes"
+                         dat$Class == "ptr with alloc" ] <- "Yes"
 
 ggplot(dat, aes(ArrayLength, Times, fill=Type, color=MeasuredAllocation)) +
   facet_grid(MeasuredAllocation ~ ., scales="free") +
