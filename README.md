@@ -1,9 +1,7 @@
-<h1 align="center"> benchmarks </h1>
+# benchmarks
 
-[![Project Status](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
-
-A collection of benchmarks.
+A collection of some runtime benchmarks.
 
 ## Author
 
-* Simon Dirmeier <a href="mailto:mail@simon-dirmeier.net">mail@simon-dirmeier.net</a>
+Simon Dirmeier <a href="mailto:simon.dirmeier@web.de">simon.dirmeier @ web.de</a>
